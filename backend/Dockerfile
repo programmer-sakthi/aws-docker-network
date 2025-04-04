@@ -1,10 +1,9 @@
-# Use Eclipse Temurin JDK 20 base image
-FROM eclipse-temurin:20-jdk
+FROM openjdk:20-jdk-slim
 
 WORKDIR /app
 
 # Copy jar file into container
-COPY target/*.jar app.jar
+COPY backend-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port
 EXPOSE 8080
